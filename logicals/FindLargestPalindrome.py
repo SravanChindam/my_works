@@ -3,10 +3,9 @@ d = {}
 for word in lst:
     d[word] = len(word)
 print(d)
+plist = []
+large_word = max(d.values())
 for nname, llen in d.items():
-    plist = []
-    mpl = max(d.values())
-    for xx, yy in d.items():
-        if yy == mpl:
-            plist.append(xx)
+    if llen == large_word:
+        plist.append(nname)
 print("Largest palindrome word:",plist)
